@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="angular-1.3.0.js"></script>
+    <script type="text/javascript" src="angular-animate.js"></script>
+    <script type="text/javascript" src="angular-ui-router.js"></script>
+    <style type="text/css">
+    .fade.ng-enter {
+        -webkit-animation: moveToBottom 1.6s ease both;
+        -moz-animation: moveToBottom 1.6s ease both;
+        animation: moveToBottom 1.6s ease both;
+    }
+    
+    .fade.ng-enter.ng-enter-active {
+        -webkit-animation: moveToBottom .6s ease both;
+        -moz-animation: moveToBottom .6s ease both;
+        animation: moveToBottom .6s ease both;
+    }
+    
+    .fade.ng-leave {
+        transition: 0.5s linear all;
+        opacity: 1;
+    }
+    
+    .fade.ng-leave.ng-leave-active {
+        opacity: 0;
+    }
+    
+    @-webkit-keyframes moveToBottom {
+        to {
+            -webkit-transform: translateY(100%);
+        }
+    }
+    
+    @-moz-keyframes moveToBottom {
+        to {
+            -moz-transform: translateY(100%);
+        }
+    }
+    
+    @keyframes moveToBottom {
+        to {
+            transform: translateY(100%);
+        }
+    }
+    </style>
+</head>
+
+
+<body ng-app>
+    <!-- 111 -->
+    <div ng-if="bool" class="fade">
+        Fade me in out
+    </div>
+    <button ng-click="bool=true">Fade In!</button>
+    <button ng-click="bool=false">Fade Out!</button>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="frame">
+
+<head>
+    <title>
+        Index
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <link ng-href="./css/{{'frame-style' | translate}}.css" rel="stylesheet" type="text/css">
+    <link href="./css/prettyPhoto.css" rel="stylesheet" type="text/css">
+    <link href="./css/jquery.jscrollpane.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <appheader></appheader>
+        </div>
+        <!-- header END -->
+        <div class="nav">
+            <appnav></appnav>
+        </div>
+        <!-- nav END -->
+        <div class="main-content" ui-view>
+        </div>
+        <!-- main-content END -->
+        <div class="footer">
+            <appfooter></appfooter>
+        </div>
+        <!-- footer END -->
+    </div>
+    <!-- main-container END -->
+</body>
+
+</html>
+<!-- jquery -->
+<script src="./js/jquery.min.js" type="text/javascript"></script>
+<script src="./js/jquery.prettyPhoto.js" type="text/javascript"></script>
+<script src="./js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+<!-- angular -->
+<script src="./js/angular.min.js" type="text/javascript"></script>
+<script src="./js/angular-ui-router.min.js" type="text/javascript"></script>
+<script src="./js/angular-translate.min.js" type="text/javascript"></script>
+<script src="./js/angular-translate-loader-static-files.min.js" type="text/javascript"></script>
+<script src="./js/angular-animate.min.js"></script>
+<script src="./js/angular-cookies.min.js" type="text/javascript"></script>
+<!-- <script src="./js/angular-translate-storage-cookie.min.js"></script> -->
+<!-- <script src="./js/angular-translate-storage-local.min.js"></script> -->
+<!-- custom -->
+<script src="./js/frame.js" type="text/javascript"></script>
+<script src="./js/common.js" type="text/javascript"></script>

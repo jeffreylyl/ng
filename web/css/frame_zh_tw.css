@@ -1,0 +1,635 @@
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    
+    body {
+        font-family: SimSun, '細明體';
+        font-size: 13px;
+        background: #005f74;
+    }
+    
+    .main-container {
+        clear: both;
+        width: 968px;
+        margin: 0 auto;
+        background: url(../imgs/main-background.png) top left repeat-y;
+    }
+    
+    .header {
+        overflow: hidden;
+        width: 920px;
+        height: 111px;
+        margin: auto;
+        background: url(../imgs/header-background.png) left bottom repeat-x;
+    }
+    
+    .nav-top {
+        float: right;
+        margin-top: 17px;
+        margin-right: 15px;
+    }
+    
+    .nav-top a {
+        margin: 0 5px 0 5px;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #707070;
+    }
+    
+    .logo {
+        clear: both;
+        width: 100%;
+    }
+    
+    .logo-left {
+        float: left;
+        margin-left: 18px;
+    }
+    
+    .logo-right {
+        float: right;
+        margin-right: 18px;
+    }
+    
+    .logo-left,
+    .logo-right {
+        margin-top: 15px;
+    }
+    
+    .nav {
+        position: relative;
+        width: 920px;
+        height: 39px;
+        margin: auto;
+        background: url(../imgs/main-nav-background.png) top left repeat-x;
+    }
+    
+    .nav ul li {
+        display: inline;
+    }
+    
+    .nav ul li a {
+        font-size: 12px;
+        float: left;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        padding-top: 39px;
+        background: url(../imgs/main-nav.png) no-repeat;
+    }
+    
+    .nav ul li#about-grand-gateway-66 a {
+        width: 153px;
+        background-position: 0 0;
+    }
+    
+    .nav ul li#shopping-mall a {
+        width: 153px;
+        background-position: -153px 0;
+    }
+    
+    .nav ul li#office a {
+        width: 154px;
+        background-position: -306px 0;
+    }
+    
+    .nav ul li#serviced-apartment a {
+        width: 153px;
+        background-position: -460px 0;
+    }
+    
+    .nav ul li#whats-new a {
+        width: 154px;
+        background-position: -613px 0;
+    }
+    
+    .nav ul li#getting-there a {
+        width: 153px;
+        background-position: -767px 0;
+    }
+    
+    .nav ul li#about-grand-gateway-66:hover > a {
+        width: 153px;
+        background-position: 0 -39px;
+    }
+    
+    .nav ul li#about-grand-gateway-66.selected > a {
+        width: 153px;
+        background-position: 0 -39px;
+    }
+    
+    .nav ul li#shopping-mall:hover > a {
+        width: 153px;
+        background-position: -153px -39px;
+    }
+    
+    .nav ul li#shopping-mall.selected > a {
+        width: 153px;
+        background-position: -153px -39px;
+    }
+    
+    .nav ul li#office:hover > a {
+        width: 154px;
+        background-position: -306px -39px;
+    }
+    
+    .nav ul li#office.selected > a {
+        width: 154px;
+        background-position: -306px -39px;
+    }
+    
+    .nav ul li#serviced-apartment:hover > a {
+        width: 153px;
+        background-position: -460px -39px;
+    }
+    
+    .nav ul li#serviced-apartment.selected > a {
+        width: 153px;
+        background-position: -460px -39px;
+    }
+    
+    .nav ul li#whats-new:hover > a {
+        width: 154px;
+        background-position: -613px -39px;
+    }
+    
+    .nav ul li#whats-new.selected > a {
+        width: 154px;
+        background-position: -613px -39px;
+    }
+    
+    .nav ul li#getting-there:hover > a {
+        width: 153px;
+        background-position: -767px -39px;
+    }
+    
+    .nav ul li#getting-there.selected > a {
+        width: 153px;
+        background-position: -767px -39px;
+    }
+    
+    .nav ul ul {
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        display: none;
+        width: 225px;
+        padding-top: 15px;
+        padding-bottom: 0;
+        background: url(../imgs/main-nav-transparent-bg.png) top left repeat-x #d5d1ca;
+    }
+    
+    .nav ul ul li {
+        float: left;
+        width: 210px;
+        margin: 0 15px 0 15px;
+    }
+    
+    .nav ul ul li:hover {
+        width: 210px;
+        margin: 0 0 0 0;
+        padding: 0 0 0 15px;
+        background: #1f9095;
+    }
+    
+    .nav ul ul li.first > a {
+        border-top: none !important;
+    }
+    
+    .nav ul ul li a {
+        width: 195px !important;
+        height: auto;
+        margin: 0;
+        padding: 10px 0 10px 0;
+        text-decoration: none;
+        color: #383530;
+        border-top: 1px dotted #eee !important;
+        background: none;
+    }
+    
+    .nav ul ul li a:hover {
+        color: #fff;
+    }
+    
+    .nav ul li#about-grand-gateway-66 ul {
+        left: 0;
+    }
+    
+    .nav ul li#shopping-mall ul {
+        left: 153px;
+    }
+    
+    .nav ul li#office ul {
+        left: 306px;
+    }
+    
+    .nav ul li#serviced-apartment ul {
+        left: 460px;
+    }
+    
+    .nav ul li#whats-new ul {
+        left: 613px;
+    }
+    
+    .nav ul li#getting-there ul {
+        left: 695px;
+    }
+    
+    .nav ul li:hover > ul {
+        display: block;
+    }
+    /*main-content*/
+    
+    .main-content {
+        width: 920px;
+        margin: auto;
+    }
+    
+    .style-overlay {
+        width: 920px;
+        height: 20px;
+        background: url(../imgs/site-overlay.png) top left no-repeat;
+    }
+    
+    .main-content-left-nav {
+        float: left;
+        width: 226px;
+        margin-right: 10px;
+        margin-left: -10px;
+    }
+    
+    .main-content-left-nav-top {
+        position: relative;
+        width: 226px;
+        height: 50px;
+        background: url(../imgs/left-nav-background-top.png) top left no-repeat;
+    }
+    
+    .main-content-left-nav-middle {
+        width: 216px;
+        padding-left: 10px;
+        background: url(../imgs/left-nav-background-middle.png) top left repeat-y;
+    }
+    
+    .main-content-left-nav-middle ul {
+        position: relative;
+        padding-left: 0;
+        list-style: none;
+    }
+    
+    .main-content-left-nav-middle ul li {
+        width: 192px;
+        padding: 10px 0 10px 7px;
+        border-top: 1px dotted #ccc;
+    }
+    
+    .main-content-left-nav-middle a {
+        display: block;
+        text-decoration: none;
+        color: #766c5f;
+    }
+    
+    .main-content-left-nav-middle ul li.first {
+        border-top: none;
+    }
+    
+    .main-content-left-nav-middle ul li:hover {
+        width: 192px;
+        /*background:url(./imgs/left-nav-selected.png) top left repeat-y;*/
+        background: #0a7968;
+    }
+    
+    .main-content-left-nav-middle ul li:hover > a {
+        color: #fff;
+    }
+    
+    .main-content-left-nav-middle ul li.selected {
+        width: 192px;
+        /*background:url(./imgs/left-nav-selected.png) top left repeat-y; */
+        background: #0a7968;
+    }
+    
+    .main-content-left-nav-middle ul li.selected > a {
+        color: #fff;
+    }
+    
+    .main-content-left-nav-bottom {
+        position: relative;
+        width: 215px;
+        height: 200px;
+        padding-top: 100px;
+        padding-left: 11px;
+        vertical-align: middle;
+        background: url(../imgs/left-nav-background-btm.png) top left no-repeat;
+    }
+    
+    .main-content-right-content {
+        float: left;
+        width: 694px;
+        color: #504b3f;
+    }
+    
+    .main-content-right-content {
+        float: left;
+        width: 694px;
+        color: #504b3f;
+    }
+    
+    .main-content-right-content-path {
+        font-size: 13px;
+        line-height: 20px;
+        margin: 0 0 20px 0;
+        margin-top: 10px;
+        color: #504b3f;
+    }
+    
+    .main-content-right-content-path a {
+        text-decoration: none;
+        color: #504b3f;
+    }
+    
+    .main-content-right-content-banner {
+        position: relative;
+        width: 694px;
+        height: 128px;
+        margin-top: 15px;
+    }
+    
+    .main-content-right-content-banner-bottom {
+        width: 693px;
+        height: 22px;
+        margin-bottom: 5px;
+        background: url(../imgs/banner-bottom-bg.png) top left no-repeat;
+    }
+    
+    .main-content-right-content-page-header h1 {
+        font-size: 15px;
+        font-weight: bold;
+        margin: 10px 0 15px 0;
+        padding: 0;
+        color: #766c5f;
+    }
+    
+    .page-content {
+        width: 694px;
+    }
+    
+    .properties .property-detail {
+        float: left;
+        width: 486px;
+    }
+    
+    .property-detail p {
+        line-height: 20px;
+        margin: 0 0 20px 0;
+        color: #504b3f;
+    }
+    
+    .properties .property-photos {
+        float: left;
+        width: 194px;
+        min-height: 575px;
+        margin: 0 0 0 10px;
+        background: url(../imgs/about-the-grand-gateway-66-photo-bg.png) no-repeat;
+    }
+    
+    .properties .property-photos .photos {
+        margin-top: 20px;
+        list-style: none;
+    }
+    
+    .properties .property-photos .photos > li {
+        float: left;
+        width: 150px;
+        margin-top: 10px;
+        margin-left: 23px;
+        padding-bottom: 5px;
+        background-color: #edebe9;
+    }
+    
+    .properties .property-photos .photos a {
+        text-decoration: none;
+    }
+    
+    .caption {
+        line-height: 15px;
+        margin: 5px 10px 0 20px;
+        list-style-image: url(../imgs/arrow.gif);
+    }
+    
+    .caption a {
+        color: #0a7968;
+    }
+    /*table */
+    
+    .page-content table {
+        line-height: 20px;
+        width: 694px;
+        margin: 15px 0 10px 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+    
+    .page-content table .odd {
+        background-color: #f0f0f0;
+    }
+    
+    .page-content table .even {
+        background-color: #e4e4e4;
+    }
+    
+    .page-content table th {
+        font-weight: bold;
+        line-height: 15px;
+        height: 5px;
+        padding: 3px 5px 3px 20px;
+        text-align: left;
+        color: #fff;
+        background: #555;
+    }
+    
+    .page-content table td {
+        padding: 10px 5px 10px 20px;
+        border: 1px solid;
+        border-top-color: #e4e1de;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    
+    .page-content table .date {
+        width: 140px;
+        vertical-align: top;
+    }
+    
+    .page-content table .details {
+        width: 444px;
+    }
+    
+    .page-content table .download {
+        width: 50px;
+    }
+    
+    .page-content table .function-detail {
+        width: 694px;
+        background-color: #f3efed;
+    }
+    
+    #list-photo > div .images-block {
+        width: 157px;
+        height: 128px;
+        padding: 8px 0 0 8px;
+        background: url(../imgs/event-gallery-image-bg.png) no-repeat;
+    }
+    
+    #list-photo > div .text-block {
+        width: 165px;
+        min-height: 43px;
+        margin-top: 2px;
+        background: url(../imgs/event-gallery-text-bg.png) top left no-repeat;
+    }
+    
+    .page-content p.address {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .page-content #location-map {
+        width: 672px;
+        padding: 10px 10px 10px 10px;
+        background-color: #dfdfdf;
+    }
+    
+    .page-content #third-level {
+        width: 668px;
+        min-height: 70px;
+        padding: 25px 0 0 45px;
+        background: url(../imgs/third-level-bg.png) top left no-repeat;
+    }
+    
+    .page-content #third-level-list {
+        list-style: none;
+        list-style-image: none;
+    }
+    
+    .page-content #third-level-list li {
+        float: left;
+        margin: 5px 25px 5px 0;
+        list-style-image: none;
+    }
+    
+    .page-content #third-level-list li > div {
+        width: 300px;
+        height: 20px;
+    }
+    
+    .page-content #third-level-list li > div.selected {
+        background: url(../imgs/highlight_head.png) left no-repeat;
+    }
+    
+    .page-content #third-level-list li #left {
+        float: left;
+        width: 18px;
+        height: 20px;
+        background: url(../imgs/arrow.gif) center no-repeat;
+    }
+    
+    .page-content #third-level-list li > div.selected #left {
+        float: left;
+        width: 18px;
+        height: 20px;
+        background: url(../imgs/arrow_white.gif) center no-repeat;
+    }
+    
+    .page-content #third-level-list li > div.selected #body {
+        float: left;
+        height: 20px;
+        color: #fff;
+        background: url(../imgs/highlight_body.png) left repeat-x;
+    }
+    
+    .page-content #third-level-list li > div a {
+        line-height: 20px;
+        vertical-align: middle;
+        text-decoration: none;
+        color: #0a7968;
+    }
+    
+    .page-content #third-level-list li > div.selected #body > a {
+        vertical-align: middle;
+        color: #fff;
+    }
+    
+    .page-content #third-level-list li > div.selected #right {
+        float: left;
+        width: 18px;
+        height: 20px;
+        background: url(../imgs/highlight_end.png) left no-repeat;
+    }
+    /*footer*/
+    
+    .footer {
+        font-size: 13px;
+        line-height: 25px;
+        clear: both;
+        width: 920px;
+        height: 80px;
+        margin: auto;
+        padding-top: 20px;
+        color: #666;
+    }
+    
+    .footer-left {
+        float: left;
+        width: 50%;
+        margin-top: 10px;
+        color: #707070;
+    }
+    
+    .footer-left p {
+        font-size: 11px;
+        line-height: 20px;
+        margin: 0 0 20px 0;
+        text-decoration: none;
+        color: #666;
+    }
+    
+    .footer-right {
+        position: relative;
+        float: left;
+        width: 50%;
+        text-align: right;
+    }
+    
+    .footer-right a {
+        font-size: 11px;
+        margin: 0 4px 0 4px;
+        text-decoration: none;
+        color: #666;
+    }
+    
+    .footer-right img {
+        vertical-align: middle;
+    }
+    
+    .sns-share {
+        position: absolute;
+        top: -20px;
+        right: 0;
+        display: none;
+        height: 28px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        background: #f7f7f5;
+    }
+    
+    .footer-right p {
+        font-size: 11px;
+        margin: 10px 0 0 0;
+        padding: 0;
+        text-decoration: none;
+        color: #666;
+    }

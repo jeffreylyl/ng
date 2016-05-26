@@ -1,0 +1,144 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="frame">
+
+<head>
+    <title>
+        title
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <script src="./js/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="./js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="./js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+    <script src="./js/common.js" type="text/javascript"></script>
+    <script src="./js/angular.min.js" type="text/javascript"></script>
+    <script src="./js/angular-translate.min.js" type="text/javascript"></script>
+    <script src="./js/angular-translate-loader-static-files.min.js" type="text/javascript"></script>
+    <script src="./js/frame.js" type="text/javascript"></script>
+    <link href="./css/{{'frame-style' | translate}}.css" rel="stylesheet" type="text/css">
+    <link href="./css/prettyPhoto.css" rel="stylesheet" type="text/css">
+    <link href="./css/jquery.jscrollpane.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="main-container" >
+        <div class="header">
+            <appheader></appheader>
+        </div><!-- header END -->
+         <div class="nav">
+            <appnav></appnav>
+        </div><!-- nav END -->
+        <div class="main-content">
+            <div class="style-overlay fix-z" style="z-index: 990;"></div>
+            <div class="main-content-left-nav">
+                <div class="main-content-left-nav-top"></div>
+                <div class="main-content-left-nav-middle">
+                    <ul>
+                        <li class="first ">
+                            <a href="#" target="_self">位置</a>
+                        </li>
+                        <li class="">
+                            <a href="#" target="_self">交通网络</a>
+                        </li>
+                        <li class="selected">
+                            <a href="#" target="_self">停车指南</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-content-left-nav-bottom">
+                </div>
+            </div>
+            <div class="main-content-right-content">
+                <p class="main-content-right-content-path">
+                    <a href="index.html">主页</a>&nbsp;&gt;&nbsp;
+                    <a href="#">关于港汇广场</a>&nbsp;&gt;&nbsp;
+                    <span>停车指南</span>&nbsp;&gt;&nbsp;
+                    <span>概览</span>
+                </p>
+                <div class="main-content-right-content-banner">
+                    <img src="./imgs/about_grand_gateway_66_company_honor_zh_cn.jpg" alt="" style="border-width:0px;">
+                </div>
+                <div class="main-content-right-content-banner-bottom"></div>
+                <div class="main-content-right-content-page-header" style="margin-top:10px;">
+                    <h1>停车指南</h1></div>
+                <div class="page-content" style="font-size: 16px;">
+                    <div>
+                        <div id="third-level">
+                            <ul id="third-level-list">
+                                <li>
+                                    <div class="selected">
+                                        <div id="left"></div>
+                                        <div id="body"><a href="#" target="_self">概览</a></div>
+                                        <div id="right"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div id="left"></div>
+                                        <div id="body"><a href="#" target="_self">港汇恒隆广场一楼</a></div>
+                                        <div id="right"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="">
+                                        <div id="left"></div>
+                                        <div id="body"><a href="#" target="_self">港汇恒隆广场B1层</a></div>
+                                        <div id="right"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div id="left"></div>
+                                        <div id="body"><a href="#" target="_self">港汇恒隆广场B2层</a></div>
+                                        <div id="right"></div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div id="left"></div>
+                                        <div id="body"><a href="#" target="_self">港汇恒隆广场B3层</a></div>
+                                        <div id="right"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- main-content END -->
+        <div class="footer">
+            <appfooter></appfooter>
+        </div>
+        <!-- footer END -->
+    </div>
+    <!-- main-container END -->
+</body>
+
+</html>
+<script type="text/javascript">
+  function share(url, w, h) {
+    window.open(url, "_blank", "width=" + (w || 615) + ",height=" + (h || 505));
+  }
+
+  $(function () {
+    var timeout;
+
+    function sns_show(stay) {
+      clearTimeout(timeout);
+      if(!stay) timeout = setTimeout(function () { $('.sns-share').hide(200) }, 500);
+      $('.sns-share').show();
+    }
+
+    $('.sns-share, .sns-share img')
+      .mousemove(function () { 
+        sns_show(true);
+      })
+      .mouseout(function () {
+        sns_show();
+      });
+
+    window.sns_show = sns_show;
+  });
+</script>

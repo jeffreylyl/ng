@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <style type="text/css">
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+    .haha{
+        background: blue;
+    }
+    #main {
+        background: grey;
+        width: 1000px;
+        height: 600px;
+        margin: 0 atuo;
+    }
+    
+    #left {
+        width: 200px;
+        height: 600px;
+        float: left;
+        background: red;
+    }
+    
+    #right {
+        width: 800px;
+        height: 600px;
+        float: right;
+        /*position: relative;*/
+        /*background: blue;*/
+    }
+    /*    #right h.ng-enter {
+        transition: .5s;
+    }
+    
+    #right h.ng-leave {
+        transition: .5s;
+    }*/
+    
+    #right.ng-enter {
+        /*       -webkit-transition: 0.5s linear all;
+        -moz-transition: 0.5s linear all;
+        -o-transition: 0.5s linear all;
+        transition: 0.5s linear all;
+        opacity: 0.5;
+        position: relative;
+        opacity: 0;
+        top: 10px;*/
+        -webkit-animation: moveFromBottom .6s ease both;
+        -moz-animation: moveFromBottom .6s ease both;
+        animation: moveFromBottom .6s ease both;
+    }
+        #left.ng-enter {
+        /*       -webkit-transition: 0.5s linear all;
+        -moz-transition: 0.5s linear all;
+        -o-transition: 0.5s linear all;
+        transition: 0.5s linear all;
+        opacity: 0.5;
+        position: relative;
+        opacity: 0;
+        top: 10px;*/
+        -webkit-animation: moveFromBottom .6s ease both;
+        -moz-animation: moveFromBottom .6s ease both;
+        animation: moveFromBottom .6s ease both;
+    }
+    
+    #right.ng-leave {}
+    
+    #right.ng-enter-active {
+        /*        top: 0;
+        opacity: 1;*/
+    }
+    
+    @-webkit-keyframes moveFromBottom {
+        from {
+            -webkit-transform: translateY(100%);
+        }
+    }
+    
+    @-moz-keyframes moveFromBottom {
+        from {
+            -moz-transform: translateY(100%);
+        }
+    }
+    
+    @keyframes moveFromBottom {
+        from {
+            transform: translateY(100%);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            <ul>
+                <li> <a ui-sref="a" ui-sref-active="haha">a.html</a></li>
+                <li> <a ui-sref="b" ui-sref-active="haha">b.html</a></li>
+            </ul>
+        </div>
+        <div>
+            <div>fixed..............</div>
+            <div id="right" ui-view>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+(function() {
+    angular
+        .module('app', ['ui.router', 'ngAnimate']).config(config);
+})();
+
+function config($stateProvider, $urlRouterProvider) {
+    // default route
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider
+        .state('overview', {
+            url: '/overview',
+            templateUrl: 'a.html'
+        })
+        .state('a', {
+            url: '/a',
+            templateUrl: 'a.html'
+        }).state('b', {
+            url: '/b',
+            templateUrl: 'b.html'
+        })
+
+}
+</script>
